@@ -7,6 +7,8 @@ const app = express().use(express.json());
 function stringProcessor(str) {
   let moddedString = "";
 
+  if (typeof str !== "string") str = String(str);
+
   // start the loop from the first 3rd letter
   // then increment by 3 to get the next 3rd letter
   for (let i = 2; i < str.length; i += 3) {
@@ -43,13 +45,11 @@ app.post("/test", async ({ body }, res) => {
 
     // if the value is empty or less than 3 characters, return empty string/some msg? 204 ?
     if (typeof Object.values(body)[0] === "object")
-      res
-        .status(400)
-        .json({
-          msg: `The value has to be a string. Instead, type ${typeof Object.values(
-            body
-          )[0]} was received.`,
-        });
+      res.status(400).json({
+        msg: `The value has to be a string. Instead, type ${typeof Object.values(
+          body
+        )[0]} was received.`,
+      });
 
     if (Object.values(body)[0].length < 3) {
       res.send(204).json({ return_string: "" });
