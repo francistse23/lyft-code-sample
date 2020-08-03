@@ -7,6 +7,8 @@ const app = express().use(express.json());
 function stringProcessor(str) {
   let moddedString = "";
 
+  if (typeof str !== "string") str = String(str);
+
   // start the loop from the first 3rd letter
   // then increment by 3 to get the next 3rd letter
   for (let i = 2; i < str.length; i += 3) {
