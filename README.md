@@ -1,7 +1,5 @@
 # Code Sample for Lyft Software Engineer Apprenticeship
 
----
-
 ##### Base Url: https://lyft-code-sample.herokuapp.com/
 
 ---
