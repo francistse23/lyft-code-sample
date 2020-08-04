@@ -4,17 +4,17 @@
 
 ---
 
-| Method | Endpoint | Request Body                | Response                             |
-| ------ | -------- | --------------------------- | ------------------------------------ |
-| POST   | /test    | { string_to_cut: {string} } | { return_string: {modified string} } |
+| Method | Endpoint | Request Body                | Response                    |
+| ------ | -------- | --------------------------- | --------------------------- |
+| POST   | /test    | { string_to_cut: {string} } | { return_string: {string} } |
 
 _Note: Request body can only be an object that contains the key `string_to_cut` which has a value of type **string**. Or else it will throw an error_
 
 ### Response Object
 
-| KEY           | VALUE TYPE | VALUE DESCRIPTION                                                             |
-| ------------- | ---------- | ----------------------------------------------------------------------------- |
-| return_string | _string_   | A modified string that extracts every 3rd character from the original string. |
+| KEY           | VALUE TYPE | VALUE DESCRIPTION                                                            |
+| ------------- | ---------- | ---------------------------------------------------------------------------- |
+| return_string | _string_   | A modified string extracted from the original string at every 3rd character. |
 
 #### Example:
 
