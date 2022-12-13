@@ -23,7 +23,7 @@
   "homepage": "https://github.com/francistse23/lyft-code-sample#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   },
   "engines": {
     "node": "^12.16.1"
